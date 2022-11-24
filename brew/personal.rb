@@ -1,5 +1,4 @@
 cask "aethersx2"
-cask "crossover"
 cask "mimestream"
 cask "netnewswire"
 cask "telegram"
