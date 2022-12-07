@@ -1,0 +1,1 @@
+/Applications/DB Browser for SQLite.app

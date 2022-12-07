@@ -1,0 +1,1 @@
+/Applications/Alfred 5.app

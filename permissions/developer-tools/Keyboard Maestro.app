@@ -1,0 +1,1 @@
+/Applications/Keyboard Maestro.app

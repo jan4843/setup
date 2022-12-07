@@ -1,0 +1,1 @@
+/Applications/Rancher Desktop.app

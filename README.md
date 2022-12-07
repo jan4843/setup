@@ -50,6 +50,34 @@
 	```
 	- Install machine-specific packages
 - Grant Privacy permissions
+	- Microphone
+	```
+	open permissions/microphone x-apple.systempreferences:com.apple.preference.security?Privacy_Microphone
+	```
+	- Camera
+	```
+	open permissions/camera x-apple.systempreferences:com.apple.preference.security?Privacy_Camera
+	```
+	- Full Disk Access
+	```
+	open permissions/full-disk-access x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles
+	```
+	- Accessibility
+	```
+	open permissions/accessibility x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility
+	```
+	- Screen Recording
+	```
+	open permissions/screen-recording x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture
+	```
+	- App Management
+	```
+	open permissions/app-management x-apple.systempreferences:com.apple.preference.security?Privacy_AppBundles
+	```
+	- Developer Tools
+	```
+	open permissions/developer-tools x-apple.systempreferences:com.apple.preference.security?Privacy_DevTools
+	```
 - Set up Maestral
 ```
 mkdir -p ~/Library/Dropbox
