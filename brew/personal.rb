@@ -1,4 +1,5 @@
 cask "aethersx2"
+cask "google-chrome"
 cask "mimestream"
 cask "netnewswire"
 cask "telegram"
