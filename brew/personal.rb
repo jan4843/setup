@@ -5,8 +5,8 @@ cask "netnewswire"
 cask "telegram"
 cask "whatsapp"
 
-mas "adguard-safari", id: 1440147259
-mas "spark", id: 1176895641
-mas "sponsorblock", id: 1573461917
-mas "super-agent", id: 1568262835
-mas "userscripts", id: 1463298887
+mas "AdGuard for Safari", id: 1440147259
+mas "Spark", id: 1176895641
+mas "SponsorBlock for YouTube - Skip Sponsorships", id: 1573461917
+mas "Super Agent", id: 1568262835
+mas "Userscripts", id: 1463298887
