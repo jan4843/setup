@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -e
+#!/bin/bash -e
 
 echo "installed..."
 if [ -e ~/.local/src/dotfiles.git ]; then

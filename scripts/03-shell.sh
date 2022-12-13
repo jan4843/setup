@@ -7,7 +7,8 @@ is_installed() {
 }
 
 is_login_shell() {
-	test "$(env -i /bin/sh -c 'echo $SHELL')" = "$SHELL_PATH"
+	# shellcheck disable=SC2016
+	test "$(env -i sh -c 'echo $SHELL')" = "$SHELL_PATH"
 }
 
 echo "installed..."

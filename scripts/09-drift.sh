@@ -38,7 +38,7 @@ current_brewfile() {
 	# cask
 	# mas
 	(
-		cd /tmp
+		cd /tmp || true
 		/opt/homebrew/bin/brew bundle dump
 		cat Brewfile
 		rm Brewfile

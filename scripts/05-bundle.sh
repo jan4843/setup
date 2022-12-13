@@ -1,11 +1,11 @@
 #!/bin/bash
 
-profile=$1
+PROFILE=$1
 
 brewfile_content() {
 	cat brew/base.rb
-	if [ "$profile" != base ]; then
-		cat "brew/$profile.rb"
+	if [ "$PROFILE" != base ]; then
+		cat "brew/$PROFILE.rb"
 	fi
 }
 

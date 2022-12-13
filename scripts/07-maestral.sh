@@ -3,8 +3,8 @@
 DROPBOX_DIR="$HOME/Library/Dropbox"
 
 configured_dir() {
-	cat ~/Library/Application\ Support/maestral/maestral.ini 2> /dev/null |
-	awk -F' *= *' '/^path/ { print $2 }'
+	awk -F' *= *' '/^path/ { print $2 }' \
+		"$HOME/Library/Application Support/maestral/maestral.ini"
 }
 
 up_to_date() {
