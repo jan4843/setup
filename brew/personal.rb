@@ -1,6 +1,7 @@
 cask "aethersx2"
 cask "firefox"
 cask "google-chrome"
+cask "gutenprint"
 cask "mimestream"
 cask "netnewswire"
 cask "telegram"
