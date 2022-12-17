@@ -9,5 +9,5 @@ brewfile_content() {
 	fi
 }
 
-/opt/homebrew/bin/brew bundle --no-upgrade --no-lock --file=<(brewfile_content) |
+brew bundle --no-upgrade --no-lock --file=<(brewfile_content) |
 grep -v 'Homebrew Bundle complete!'

@@ -1,3 +1,5 @@
+export PATH := /opt/homebrew/bin:$(PATH)
+
 PROFILES := $(basename $(notdir $(wildcard brew/*.rb)))
 
 .SILENT:

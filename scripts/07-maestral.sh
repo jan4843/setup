@@ -14,7 +14,7 @@ up_to_date() {
 
 echo "installed..."
 if ! [ -e /Applications/Maestral.app/Contents/MacOS/maestral-cli ]; then
-	/opt/homebrew/bin/brew install --cask maestral
+	brew install --cask maestral
 fi
 
 echo "configured..."

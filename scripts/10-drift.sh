@@ -11,13 +11,9 @@ brewfile_content() {
 }
 
 expected_brewfile() {
-	# tap
 	brewfile_content |
 	grep '^tap '
 
-	# brew
-	# cask
-	# mas
 	brewfile_content |
 	grep -v '^tap ' |
 	grep . |
@@ -25,25 +21,18 @@ expected_brewfile() {
 }
 
 current_brewfile() {
-	# tap
-	/opt/homebrew/bin/brew tap |
-	grep -v '^homebrew/' |
+	brew tap |
 	xargs -I{} printf 'tap "%s"\n' {}
 
-	# brew
-	/opt/homebrew/bin/brew leaves |
-	grep -v '^mas$' |
+	brew leaves |
 	xargs -I{} printf 'brew "%s"\n' {}
 
-	# cask
-	# mas
 	(
 		cd /tmp || true
-		/opt/homebrew/bin/brew bundle dump
+		brew bundle dump
 		cat Brewfile
 		rm Brewfile
-	) |
-	grep -v -e '^tap' -e '^brew '
+	) | grep -Ev '^(tap|brew) '
 }
 
 brewfile_drift() {

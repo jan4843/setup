@@ -13,7 +13,7 @@ is_login_shell() {
 
 echo "installed..."
 if ! is_installed; then
-	/opt/homebrew/bin/brew install bash
+	brew install bash
 fi
 
 echo "configured..."
