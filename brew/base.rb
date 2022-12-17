@@ -14,6 +14,7 @@ brew "unar"
 brew "wget"
 
 cask "alfred"
+cask "alt-tab"
 cask "appcleaner"
 cask "colorpicker-skalacolor"
 cask "db-browser-for-sqlite"
