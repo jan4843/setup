@@ -3,40 +3,37 @@
 PROFILE=$1
 TCC_DB_PATH="/Library/Application Support/com.apple.TCC/TCC.db"
 
-brewfile_content() {
+expected_brewfile() {
 	cat brew/base.rb
 	if [ "$PROFILE" != base ]; then
 		cat "brew/$PROFILE.rb"
 	fi
 }
 
-expected_brewfile() {
-	brewfile_content |
-	grep '^tap '
-
-	brewfile_content |
-	grep -v '^tap ' |
-	grep . |
-	sort -u
-}
-
 current_brewfile() {
-	brew tap |
-	xargs -I{} printf 'tap "%s"\n' {}
-
 	brew leaves |
-	xargs -I{} printf 'brew "%s"\n' {}
+	xargs -I{} \
+	printf 'brew "%s"\n' {}
 
 	(
 		cd /tmp || true
 		brew bundle dump
 		cat Brewfile
 		rm Brewfile
-	) | grep -Ev '^(tap|brew) '
+	) | grep -v '^brew '
+}
+
+canonicalize_brewfile() {
+	local brewfile_content
+	brewfile_content=$(grep .)
+	printf '%s\n' "$brewfile_content" | grep -e '^tap ' | sort -u
+	printf '%s\n' "$brewfile_content" | grep -v '^tap ' | sort -u
 }
 
 brewfile_drift() {
-	diff -U0 <(expected_brewfile) <(current_brewfile) |
+	diff -U0 \
+		<(expected_brewfile | canonicalize_brewfile) \
+		<(current_brewfile | canonicalize_brewfile) |
 	awk -F\+ '/^[+][^+]/ { print $2 }'
 }
 
