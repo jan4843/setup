@@ -9,8 +9,7 @@ _help:
 	printf '  make %s\n' $(PROFILES)
 
 $(PROFILES):
-	find scripts/* \
-		-exec tput rev \; \
-		-print \
-		-exec tput sgr0 \; \
-		-exec bash {} $@ \;
+	for script in scripts/*; do \
+		tput rev; echo $$script; tput sgr0; \
+		bash $$script $@ || exit $$?; \
+	done
