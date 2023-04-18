@@ -4,6 +4,7 @@ cask "google-chrome"
 cask "gutenprint"
 cask "mimestream"
 cask "netnewswire"
+cask "sonos"
 cask "telegram"
 cask "whatsapp"
 mas "AdGuard for Safari", id: 1440147259
