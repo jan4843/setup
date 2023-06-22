@@ -25,7 +25,7 @@ current_brewfile() {
 
 canonicalize_brewfile() {
 	local brewfile_content
-	brewfile_content=$(grep .)
+	brewfile_content=$(grep -E '^(tap|brew|cask|mas) ')
 	printf '%s\n' "$brewfile_content" | grep -e '^tap ' | sort -u
 	printf '%s\n' "$brewfile_content" | grep -v '^tap ' | sort -u
 }
