@@ -1,4 +1,7 @@
 script "adguard-dns"
+script "smc"
+
+brew "mas"
 
 cask "aethersx2"
 cask "firefox"
@@ -8,6 +11,7 @@ cask "netnewswire"
 cask "pdf-squeezer"
 cask "proxyman"
 cask "rapidapi"
+cask "sf-symbols"
 cask "sonos"
 cask "telegram"
 cask "whatsapp"
