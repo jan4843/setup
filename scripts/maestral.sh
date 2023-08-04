@@ -8,22 +8,18 @@ configured_dir() {
 }
 
 up_to_date() {
-	status=$(/Applications/Maestral.app/Contents/MacOS/maestral-cli filestatus "$DROPBOX_DIR")
-	test "$status" = "up to date"
+	/Applications/Maestral.app/Contents/MacOS/maestral-cli status |
+	grep -iq "up to date"
 }
 
-echo "installed..."
-if ! [ -e /Applications/Maestral.app/Contents/MacOS/maestral-cli ]; then
-	brew install --cask maestral
+if ! pgrep -qx Maestral; then
+	open /Applications/Maestral.app
 fi
 
 echo "configured..."
-mkdir -p "$DROPBOX_DIR"
 if [ "$(configured_dir)" != "$DROPBOX_DIR" ]; then
+	mkdir -p "$DROPBOX_DIR"
 	open -R "$DROPBOX_DIR"
-fi
-if ! lsappinfo info -only bundleID com.samschott.maestral-cocoa | grep -q .; then
-	open /Applications/Maestral.app
 fi
 while [ "$(configured_dir)" != "$DROPBOX_DIR" ]; do
 	sleep 1
