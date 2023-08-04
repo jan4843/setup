@@ -1,11 +1,43 @@
-{
-	strings /Applications/Rectangle.app/Contents/Resources/Assets.car |
-	grep 'Template\.png$' |
-	sed 's/Template\.png$//' |
-	grep -v '^make'
-
-	printf '%s\n' smaller larger
-} |
+printf '%s\n' \
+	almostMaximize \
+	bottomCenterSixth \
+	bottomHalf \
+	bottomLeft \
+	bottomLeftSixth \
+	bottomRight \
+	bottomRightSixth \
+	center \
+	centerHalf \
+	centerThird \
+	firstFourth \
+	firstThird \
+	firstThreeFourths \
+	firstTwoThirds \
+	larger \
+	lastFourth \
+	lastThird \
+	lastThreeFourths \
+	lastTwoThirds \
+	leftHalf \
+	maximize \
+	maximizeHeight \
+	moveDown \
+	moveLeft \
+	moveRight \
+	moveUp \
+	nextDisplay \
+	previousDisplay \
+	restore \
+	rightHalf \
+	secondFourth \
+	smaller \
+	thirdFourth \
+	topCenterSixth \
+	topHalf \
+	topLeft \
+	topLeftSixth \
+	topRight \
+	topRightSixth |
 xargs -I{} \
 defaults write com.knollsoft.Rectangle {} -dict
 
