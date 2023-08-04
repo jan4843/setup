@@ -1,13 +1,9 @@
 #!/bin/bash
 
-PROFILE=$1
 TCC_DB_PATH="/Library/Application Support/com.apple.TCC/TCC.db"
 
 expected_brewfile() {
-	cat brew/base.rb
-	if [ "$PROFILE" != base ]; then
-		cat "brew/$PROFILE.rb"
-	fi
+	cat profiles/base.rb "profiles/$PROFILE.rb"
 }
 
 current_brewfile() {

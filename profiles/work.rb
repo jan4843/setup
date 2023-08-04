@@ -1,5 +1,6 @@
 tap "fluxcd/tap"
 tap "int128/kubelogin"
+
 brew "bundler-completion"
 brew "cilium-cli"
 brew "fluxcd/tap/flux"
@@ -11,6 +12,7 @@ brew "openshift-cli"
 brew "ruby-completion"
 brew "tektoncd-cli"
 brew "terraform"
+
 cask "bitwarden"
 cask "mongodb-compass"
 cask "postman"

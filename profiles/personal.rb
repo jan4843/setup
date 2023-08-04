@@ -9,6 +9,7 @@ cask "rapidapi"
 cask "sonos"
 cask "telegram"
 cask "whatsapp"
+
 mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Infuse", id: 1136220934
 mas "Numbers", id: 409203825
