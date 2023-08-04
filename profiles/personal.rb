@@ -1,3 +1,5 @@
+script "adguard-dns"
+
 cask "aethersx2"
 cask "firefox"
 cask "google-chrome"
