@@ -1,5 +1,6 @@
 script "ssh"
-script "dependencies"
+script "xcode-cli-tools"
+script "homebrew"
 script "shell"
 script "dotfiles"
 script "smc"
