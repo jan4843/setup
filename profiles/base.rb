@@ -6,7 +6,6 @@ script "dotfiles"
 
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/core"
 
 brew "bash-completion@2"
