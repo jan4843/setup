@@ -8,7 +8,10 @@ configured_dir() {
 }
 
 up_to_date() {
-	/Applications/Maestral.app/Contents/MacOS/maestral-cli status |
+	{
+		/Applications/Maestral.app/Contents/MacOS/maestral-cli status
+		/Applications/Maestral.app/Contents/MacOS/maestral-cli filestatus "$DROPBOX_DIR"
+	} |
 	grep -iq "up to date"
 }
 
