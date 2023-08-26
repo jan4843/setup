@@ -1,3 +1,5 @@
+script "hostname"
+
 tap "fluxcd/tap"
 tap "int128/kubelogin"
 
