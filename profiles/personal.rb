@@ -4,6 +4,7 @@ script "smc"
 
 brew "mas"
 
+cask "discord"
 cask "firefox"
 cask "google-chrome"
 cask "gutenprint"
