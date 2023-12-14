@@ -1,5 +1,4 @@
 script "hostname"
-script "adguard-dns"
 script "smc"
 
 brew "mas"
